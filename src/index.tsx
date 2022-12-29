@@ -3,7 +3,6 @@ import './index.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Contact from './pages/Contact';
-import Content from './posts/content.mdx';
 import Home from './pages/Home';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -26,7 +25,6 @@ root.render(
             <Route path="/posts/who-is-beingnotthinking" element={<WhoIsBeingNotThinking />} />
             <Route path="/posts/why-being-not-thinking" element={<WhyBeingNotThinking />} />
             <Route path="/posts/why-we-chose-vanlife" element={<WhyWeChoseVanlife />} />
-            <Route path="/content" element={<Content />} />
           </Routes>
         </SiteContainer>
       </BrowserRouter>
