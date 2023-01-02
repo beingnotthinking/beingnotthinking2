@@ -10,3 +10,7 @@
     X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "1; mode=block"
 
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
