@@ -1,6 +1,5 @@
 [build]
   command = "CI= npm run build"
-  publish = "src"
   functions = "./netlify/functions/"
 
 [[redirects]]
