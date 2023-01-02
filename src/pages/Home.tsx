@@ -6,7 +6,7 @@ import React, { useEffect } from 'react';
 
 function Home() {
 
-    console.log("test")
+/*     console.log("test")
 
     const igdata = {InstagramData};
 
@@ -16,7 +16,7 @@ function Home() {
         {
 
         }
-    ]
+    ] */
 
 
     const posts = [
@@ -59,9 +59,7 @@ function Home() {
                     }                                
                 </div>       
         </div>
-        <div id="instagram-container">
-
-        </div>       
+        {InstagramData}     
         </>
 
     )
