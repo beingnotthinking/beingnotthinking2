@@ -24,15 +24,15 @@ async function InstagramData() {
     
     let post0 = instagramPosts[0];
     let photoUrl0 = post0.url;
-    let caption0 = post0.caption;
+    let caption0 = post0.caption.split('#')[0];
 
     let post1 = instagramPosts[1];
     let photoUrl1 = post1.url;
-    let caption1 = post1.caption;
+    let caption1 = post1.caption.split('#')[0];
 
     let post2 = instagramPosts[2];
     let photoUrl2 = post2.url;
-    let caption2 = post2.caption;
+    let caption2 = post2.caption.split('#')[0];
 
     return (
       <div id="instagram-container">
