@@ -5,7 +5,16 @@ import InstagramData from '../components/InstagramData';
 import React, { useEffect } from 'react';
 
 function Home() {
-    
+    const [instagramData, setInstagramData] = React.useState<JSX.Element | null>(null);
+
+    React.useEffect(() => {
+        InstagramData().then(data => {
+            if (data !== undefined) {
+              setInstagramData(data);
+            }
+          });
+      }, []);
+
     const posts = [
         {
             postId: "who-is-beingnotthinking",
@@ -46,7 +55,7 @@ function Home() {
                     }                                
                 </div>       
         </div>
-        {InstagramData}     
+        {instagramData}   
         </>
 
     )
