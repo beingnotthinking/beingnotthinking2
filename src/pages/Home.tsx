@@ -67,7 +67,7 @@ function Home() {
                 }
             </div>
             <div>
-                console.log(instagramData)
+                instagramData
             </div>
         </div>
     )
