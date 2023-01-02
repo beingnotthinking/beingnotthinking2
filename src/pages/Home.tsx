@@ -1,32 +1,21 @@
 import './Home.css';
 
 import PostPreview from '../components/PostPreview';
+import InstagramData from '../components/InstagramData';
 import React, { useEffect } from 'react';
 
 function Home() {
 
-    const getData=()=>{
-        fetch('https://beingnotthinking.com/.netlify/functions/instagram'
-        ,{
-          headers : { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-           }
-        }
-        )
-          .then(function(response){
-            console.log(response)
-            return response.json();
-          })
-          .then(function(myJson) {
-            console.log(myJson);
-          });
-      }
-      useEffect(()=>{
-        getData()
-      },[])
+    const igdata = {InstagramData}
 
-    const instagramData = getData()
+    const instagramPosts = [
+        {
+
+        }
+
+
+    ]
+
 
     const posts = [
         {
@@ -50,26 +39,29 @@ function Home() {
     ];
 
     return (
-        <div className='home-container'>
-            <div className="blog-posts">
-                {
-                    posts.map(({postId, imgAlt, imgSrc, title}) => {
-                        return (
-                            <PostPreview
-                            key={postId}
-                            postId={postId}
-                            imgSrc={imgSrc}
-                                imgAlt={imgAlt}
-                                title={title}
-                                />
-                                );
-                            })
-                }
-            </div>
-            <div>
-                instagramData
-            </div>
+        <>
+         <div className='home-container'>
+                <div className="blog-posts"> 
+                    {
+                        posts.map(({postId, imgAlt, imgSrc, title}) => {
+                            return (
+                                <PostPreview
+                                key={postId}
+                                postId={postId}
+                                imgSrc={imgSrc}
+                                    imgAlt={imgAlt}
+                                    title={title}
+                                    />
+                                    );
+                                })
+                    }                                
+                </div>       
         </div>
+        <div id="instagram-container">
+
+        </div>       
+        </>
+
     )
 }
 
