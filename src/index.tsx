@@ -19,7 +19,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-      <BrowserRouter basename="beingnotthinking.com">
+      <BrowserRouter>
         <SiteContainer>
           <Routes>
             <Route path="/" element={<Home />} />
