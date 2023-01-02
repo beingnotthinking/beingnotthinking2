@@ -5,20 +5,7 @@ import InstagramData from '../components/InstagramData';
 import React, { useEffect } from 'react';
 
 function Home() {
-
-/*     console.log("test")
-
-    const igdata = {InstagramData};
-
-    console.log(igdata)
-
-    const instagramPosts = [
-        {
-
-        }
-    ] */
-
-
+    
     const posts = [
         {
             postId: "who-is-beingnotthinking",
