@@ -26,6 +26,8 @@ function Home() {
         getData()
       },[])
 
+    const instagramData = getData()
+
     const posts = [
         {
             postId: "who-is-beingnotthinking",
@@ -65,8 +67,7 @@ function Home() {
                 }
             </div>
             <div>
-                getData()
-                console.log(getData())
+                console.log(instagramData)
             </div>
         </div>
     )
