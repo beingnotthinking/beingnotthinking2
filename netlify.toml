@@ -1,2 +1,13 @@
 [build]
   command = "CI= npm run build"
+  publish = "public"
+  functions = "./netlify/functions/"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+
+[build]
