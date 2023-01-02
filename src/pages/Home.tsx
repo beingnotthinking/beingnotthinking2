@@ -1,11 +1,11 @@
 import './Home.css';
 
 import PostPreview from '../components/PostPreview';
-/* import InstagramData from '../components/InstagramData';
-import React, { useEffect } from 'react'; */
+import InstagramData from '../components/InstagramData';
+import React, { useEffect } from 'react';
 
 function Home() {
-/*     const [instagramData, setInstagramData] = React.useState<JSX.Element | null>(null);
+    const [instagramData, setInstagramData] = React.useState<JSX.Element | null>(null);
 
     React.useEffect(() => {
         InstagramData().then(data => {
@@ -13,7 +13,7 @@ function Home() {
               setInstagramData(data);
             }
           });
-      }, []); */
+      }, []);
 
     const posts = [
         {
