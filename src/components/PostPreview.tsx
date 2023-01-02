@@ -19,7 +19,7 @@ function PostPreview({
 
     return (
         <div className="post-preview">
-            <img src={imgSrc} alt={imgAlt} />
+            <img src={imgSrc} alt={imgAlt} width="300rem"/>
             <h2>{title}</h2>
             <Link to={postLink}>Read More</Link>
         </div>

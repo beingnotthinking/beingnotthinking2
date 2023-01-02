@@ -17,6 +17,7 @@ function SiteContainer({ children }: SiteContainerProps) {
           <nav>
             <ul>
               <li><Link to="/">Home</Link></li>
+              <li><Link to="/travel">Travel</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
           </nav>

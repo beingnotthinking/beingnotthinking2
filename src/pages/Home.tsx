@@ -1,9 +1,31 @@
 import './Home.css';
 
 import PostPreview from '../components/PostPreview';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function Home() {
+
+    const getData=()=>{
+        fetch('https://beingnotthinking.com/.netlify/functions/instagram'
+        ,{
+          headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+           }
+        }
+        )
+          .then(function(response){
+            console.log(response)
+            return response.json();
+          })
+          .then(function(myJson) {
+            console.log(myJson);
+          });
+      }
+      useEffect(()=>{
+        getData()
+      },[])
+
     const posts = [
         {
             postId: "who-is-beingnotthinking",
@@ -41,6 +63,10 @@ function Home() {
                                 );
                             })
                 }
+            </div>
+            <div>
+                getData()
+                console.log(getData())
             </div>
         </div>
     )

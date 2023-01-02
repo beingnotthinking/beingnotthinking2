@@ -4,10 +4,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Contact from './pages/Contact';
 import Home from './pages/Home';
+import Travel from './pages/Travel';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import SiteContainer from './SiteContainer';
 import WhoIsBeingNotThinking from './posts/who-is-beingnotthinking.mdx'
+import CarryOnAndADream from './travel/posts/carry-on-and-a-dream.mdx'
 import WhyBeingNotThinking from './posts/why-being-not-thinking.mdx'
 import WhyWeChoseVanlife from './posts/why-we-chose-vanlife.mdx'
 import reportWebVitals from './reportWebVitals';
@@ -22,6 +24,8 @@ root.render(
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/travel" element={<Travel />} />
+            <Route path="/travel/posts/carry-on-and-a-dream" element={<CarryOnAndADream />} />
             <Route path="/posts/who-is-beingnotthinking" element={<WhoIsBeingNotThinking />} />
             <Route path="/posts/why-being-not-thinking" element={<WhyBeingNotThinking />} />
             <Route path="/posts/why-we-chose-vanlife" element={<WhyWeChoseVanlife />} />
