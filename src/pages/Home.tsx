@@ -6,14 +6,16 @@ import React, { useEffect } from 'react';
 
 function Home() {
 
-    const igdata = {InstagramData}
+    console.log("test")
+
+    const igdata = {InstagramData};
+
+    console.log(igdata)
 
     const instagramPosts = [
         {
 
         }
-
-
     ]
 
 
