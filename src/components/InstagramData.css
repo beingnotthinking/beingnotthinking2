@@ -1,3 +1,8 @@
 .post-preview img {
     border-radius: 3px;
 }
+
+.instagram-caption {
+    inline-size: 300rem;
+    overflow-wrap: break-word;
+}
