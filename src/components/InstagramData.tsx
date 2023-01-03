@@ -11,7 +11,9 @@ const InstagramPost: React.FC<InstagramPostProps> = ({ imgSrc, caption }) => {
   return (
     <div id="instagram-post">
       <img src={imgSrc} width="300rem"/>
-      <p id="instagram-caption">{caption}</p>
+      <div id="instagram-caption">
+        <p>{caption}</p>
+      </div>
     </div>
   );
 };
