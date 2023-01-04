@@ -14,6 +14,11 @@
     max-width: 80rem;
 }
 
+.instagram-caption {
+    inline-size: 300rem;
+    overflow-wrap: break-all;
+}
+
 .insta-posts {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
