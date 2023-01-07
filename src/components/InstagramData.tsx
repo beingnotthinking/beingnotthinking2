@@ -26,9 +26,12 @@ const InstagramPost: React.FC<InstagramPostProps> = ({ imgSrc, caption }) => {
   // Resize the image
   resizeImage(image);
 
+  // Store the src of the image element
+  const resizedImgSrc = image.src;
+
   return (
     <div id="instagram-post">
-      <img src={imgSrc}/>
+      <img src={resizedImgSrc}/>
       <p className="caption">{caption}</p>
     </div>
   );
