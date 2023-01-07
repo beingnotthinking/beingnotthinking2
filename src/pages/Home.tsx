@@ -55,11 +55,7 @@ function Home() {
                     }                                
                 </div>       
         </div>
-        <div className='instagram-container'>
-            <div className='insta-posts'>
-                {instagramData}
-            </div>              
-        </div>
+            {instagramData}
         </>
     )
 }
