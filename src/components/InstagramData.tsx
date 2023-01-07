@@ -4,20 +4,23 @@ import { Link } from "react-router-dom";
 interface InstagramPostProps {
     imgSrc: string;
     caption: string;
+    permalink: string;
   }
   
 
 // InstagramPost component
-const InstagramPost: React.FC<InstagramPostProps> = ({ imgSrc, caption }) => {
+const InstagramPost: React.FC<InstagramPostProps> = ({ imgSrc, caption, permalink }) => {
   return (
     <div className="instagram-post">
-      <img src={imgSrc} width="300rem"/>
+      <a href={permalink}>
+        <img className="ig-image" src={imgSrc} width="300rem"/>
+      </a>
       <p className="caption">{caption}</p>
     </div>
   );
 };
 
-function filterOutVideoUrls(items: { id: string; url: string; caption: string }[]) {
+function filterOutVideoUrls(items: { id: string; url: string; caption: string; permalink: string; }[]) {
   return items.filter(item => !item.url.startsWith("https://video-"));
 }
 
@@ -32,21 +35,24 @@ async function InstagramData() {
     let post0 = instagramPosts[0];
     let photoUrl0 = post0.url;
     let caption0 = post0.caption.split('#')[0];
+    let permalink0 = post0.permalink
 
     let post1 = instagramPosts[1];
     let photoUrl1 = post1.url;
     let caption1 = post1.caption.split('#')[0];
+    let permalink1 = post1.permalink
 
     let post2 = instagramPosts[2];
     let photoUrl2 = post2.url;
     let caption2 = post2.caption.split('#')[0];
+    let permalink2 = post2.permalink
 
     return (
       <div className="instagram-container">
         <div className="instagram-posts">
-          <InstagramPost imgSrc={photoUrl0} caption={caption0} />
-          <InstagramPost imgSrc={photoUrl1} caption={caption1} />
-          <InstagramPost imgSrc={photoUrl2} caption={caption2} />
+          <InstagramPost imgSrc={photoUrl0} caption={caption0} permalink={permalink0}/>
+          <InstagramPost imgSrc={photoUrl1} caption={caption1} permalink={permalink1}/>
+          <InstagramPost imgSrc={photoUrl2} caption={caption2} permalink={permalink2}/>
         </div>
       </div>
     );

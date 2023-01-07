@@ -23,6 +23,7 @@ exports.handler = function instagram(event, context, callback) {
             id: i.id,
             url: i.media_url,
             caption: i.caption,
+            permalink: i.permalink,
           })),
         ),
       })
