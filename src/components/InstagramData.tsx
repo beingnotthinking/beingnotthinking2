@@ -10,7 +10,7 @@ interface InstagramPostProps {
 const InstagramPost: React.FC<InstagramPostProps> = ({ imgSrc, caption }) => {
   return (
     <div id="instagram-post">
-      <img src={imgSrc} width="300rem"/>
+      <img src={imgSrc}/>
       <p className="caption">{caption}</p>
     </div>
   );
