@@ -5,33 +5,13 @@ interface InstagramPostProps {
     imgSrc: string;
     caption: string;
   }
-
-function resizeImage(image: HTMLImageElement) {
-  // Calculate the new width and height of the image
-  const newWidth = image.naturalHeight / 5 * 4;
-  const newHeight = image.naturalHeight;
-
-  // Set the width and height of the image
-  image.width = newWidth;
-  image.height = newHeight;
-}
+  
 
 // InstagramPost component
 const InstagramPost: React.FC<InstagramPostProps> = ({ imgSrc, caption }) => {
-  const image = new Image();
-
-  // Set the src property of the image element
-  image.src = imgSrc;
-
-  // Resize the image
-  resizeImage(image);
-
-  // Store the src of the image element
-  const resizedImgSrc = image.src;
-
   return (
     <div id="instagram-post">
-      <img src={resizedImgSrc}/>
+      <img src={imgSrc} width="300rem"/>
       <p className="caption">{caption}</p>
     </div>
   );
