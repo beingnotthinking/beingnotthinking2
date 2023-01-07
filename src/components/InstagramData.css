@@ -2,7 +2,14 @@
     border-radius: 3px;
 }
 
-.instagram-caption {
+.instagram-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2rem;
+
+}
+
+.caption {
     inline-size: 300rem;
     overflow-wrap: break-word;
 }
