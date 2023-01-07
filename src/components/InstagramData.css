@@ -11,12 +11,13 @@
 }
 
 .caption {
+    width: 18.75rem;
+    text-align: center;
+    padding: 5%;
     font-size: 14px;
     line-height: 1.5;
     display: block;
     margin: auto;
-    padding-top: 5%;
-    padding-bottom: 5%;
 }
 
 .instagram-container {
