@@ -2,6 +2,14 @@
     border-radius: 3px;
 }
 
+.ig-image {
+    border-radius: 3px;
+    display: block;
+    margin: auto;
+    padding-top: 12px;
+    border-radius: 5px
+}
+
 .caption {
     width: 18.75rem;
     text-align: center;
