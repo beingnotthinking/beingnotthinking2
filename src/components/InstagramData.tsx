@@ -28,7 +28,7 @@ async function InstagramData() {
     const response = await fetch('https://beingnotthinking.com/.netlify/functions/instagram');
     let instagramPostsNoFilter = await response.json();
 
-    let instagramPosts = instagramPostsNoFilter.filterOutVideoUrls()
+    let instagramPosts = filterOutVideoUrls(instagramPostsNoFilter);
     
     let post0 = instagramPosts[0];
     let photoUrl0 = post0.url;
