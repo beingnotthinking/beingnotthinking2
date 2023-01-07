@@ -42,7 +42,7 @@ async function InstagramData() {
     let caption2 = post2.caption.split('#')[0];
 
     return (
-      <div id="instagram-container">
+      <div className="instagram-container">
         <div className="blog-posts">
           <InstagramPost imgSrc={photoUrl0} caption={caption0} />
           <InstagramPost imgSrc={photoUrl1} caption={caption1} />
