@@ -43,7 +43,7 @@ async function InstagramData() {
 
     return (
       <div className="instagram-container">
-        <div className="blog-posts">
+        <div className="instagram-posts">
           <InstagramPost imgSrc={photoUrl0} caption={caption0} />
           <InstagramPost imgSrc={photoUrl1} caption={caption1} />
           <InstagramPost imgSrc={photoUrl2} caption={caption2} />
