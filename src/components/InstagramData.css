@@ -2,20 +2,18 @@
     border-radius: 3px;
 }
 
-.instagram-post {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-.instagram-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-gap: 2rem;
-
-}
-
 .caption {
     width: 18.75rem;
     text-align: center;
+}
+
+.instagram-container {
+    padding: 3em;
+    max-width: 80rem;
+}
+
+.instagram-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2rem;
 }

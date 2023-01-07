@@ -9,18 +9,3 @@
     grid-gap: 2rem;
 }
 
-.instagram-container {
-    padding: 3em;
-    max-width: 80rem;
-}
-
-.instagram-caption {
-    inline-size: 300rem;
-    overflow-wrap: break-all;
-}
-
-.insta-posts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-gap: 2rem;
-}

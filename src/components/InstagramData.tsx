@@ -43,9 +43,11 @@ async function InstagramData() {
 
     return (
       <div id="instagram-container">
-        <InstagramPost imgSrc={photoUrl0} caption={caption0} />
-        <InstagramPost imgSrc={photoUrl1} caption={caption1} />
-        <InstagramPost imgSrc={photoUrl2} caption={caption2} />
+        <div className="blog-posts">
+          <InstagramPost imgSrc={photoUrl0} caption={caption0} />
+          <InstagramPost imgSrc={photoUrl1} caption={caption1} />
+          <InstagramPost imgSrc={photoUrl2} caption={caption2} />
+        </div>
       </div>
     );
   } catch (error) {
