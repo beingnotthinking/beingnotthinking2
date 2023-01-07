@@ -18,11 +18,17 @@ const InstagramPost: React.FC<InstagramPostProps> = ({ imgSrc, caption }) => {
   );
 };
 
+function filterOutVideoUrls(items: { id: string; url: string; caption: string }[]) {
+  return items.filter(item => !item.url.startsWith("https://video-"));
+}
+
 // InstagramData function
 async function InstagramData() {
   try {
     const response = await fetch('https://beingnotthinking.com/.netlify/functions/instagram');
-    let instagramPosts = await response.json();
+    let instagramPostsNoFilter = await response.json();
+
+    let instagramPosts = instagramPostsNoFilter.filterOutVideoUrls()
     
     let post0 = instagramPosts[0];
     let photoUrl0 = post0.url;
