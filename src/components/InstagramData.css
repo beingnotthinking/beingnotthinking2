@@ -10,6 +10,6 @@
 }
 
 .caption {
-    inline-size: 300rem;
-    overflow-wrap: break-word;
+    width: 300rem;
+    text-align: center;
 }
