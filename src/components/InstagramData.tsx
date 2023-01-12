@@ -11,12 +11,12 @@ interface InstagramPostProps {
 // InstagramPost component
 const InstagramPost: React.FC<InstagramPostProps> = ({ imgSrc, caption, permalink }) => {
   return (
-    <div className="instagram-post">
-      <a href={permalink}>
-        <img className="ig-image" src={imgSrc} width="300rem"/>
-      </a>
-      <p className="caption">{caption}</p>
-    </div>
+    <a href={permalink}>
+      <div className="instagram-post">
+          <img className="ig-image" src={imgSrc} width="300rem"/>    
+        <p className="caption">{caption}</p>  
+      </div>
+    </a>
   );
 };
 
