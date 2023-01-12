@@ -13,7 +13,9 @@ function SiteContainer({ children }: SiteContainerProps) {
     <div className="site-container">
       <header>
         <div className="header-upper">
-          <h1>Being Not Thinking</h1>
+          <a href="https://beingnotthinking.com">
+            <h1>Being Not Thinking</h1>
+          </a>
           <nav>
             <ul>
               <li><Link to="/">Home</Link></li>

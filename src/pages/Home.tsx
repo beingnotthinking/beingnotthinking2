@@ -2,6 +2,10 @@ import './Home.css';
 
 import PostPreview from '../components/PostPreview';
 import InstagramData from '../components/InstagramData';
+import WhoIsBeingNotThinking from '../images/who-is-beingnotthinking.webp'
+import WhyWeChoseVanlife from '../images/why-we-chose-vanlife.webp'
+import WhyBeingNotThinking from '../images/why-being-not-thinking.webp'
+
 import React, { useEffect } from 'react';
 
 function Home() {
@@ -18,21 +22,21 @@ function Home() {
     const posts = [
         {
             postId: "who-is-beingnotthinking",
-            imgSrc: "http://placekitten.com/300/300",
+            imgSrc: WhoIsBeingNotThinking,
             imgAlt: "A picture of a person sitting on a rock in the middle of a lake",
             title: "Who is BeingNotThinking?",
         },
         {
             postId: "why-we-chose-vanlife",
-            imgSrc: "http://placekitten.com/300/300",
+            imgSrc: WhyWeChoseVanlife,
             imgAlt: "A picture of a person sitting on a rock in the middle of a lake",
             title: "Why We Chose Vanlife",
         },
         {
             postId: "why-being-not-thinking",
-            imgSrc: "http://placekitten.com/300/300",
+            imgSrc: WhyBeingNotThinking,
             imgAlt: "A picture of a person sitting on a rock in the middle of a lake",
-            title: "Why BeingNotThinking?",
+            title: "Why \"BeingNotThinking\"?",
         }
     ];
 
