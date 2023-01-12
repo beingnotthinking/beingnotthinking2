@@ -1,3 +1,5 @@
 .post-preview img {
     border-radius: 3px;
+    display: block;
+    margin: auto;
 }

@@ -1,3 +1,8 @@
+.instagram-container {
+    padding: 3em;
+    max-width: 80rem;
+}
+
 .post-preview img {
     border-radius: 3px;
 }
@@ -18,11 +23,6 @@
     line-height: 1.5;
     display: block;
     margin: auto;
-}
-
-.instagram-container {
-    padding: 3em;
-    max-width: 80rem;
 }
 
 .instagram-posts {
