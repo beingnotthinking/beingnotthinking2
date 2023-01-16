@@ -1,14 +1,14 @@
 .site-container header {
-  color: #FFF;
+  color: #fff;
   background-color: #01093c;
   padding: 1.8em;
 }
 
 .header-upper h1 {
-    font-size: 1.56rem;
-    font-weight: bold;
-    padding: 0;
-    margin: 0;
+  font-size: 1.56rem;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
 }
 
 .header-upper nav ul {
@@ -30,10 +30,11 @@
 .header-upper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.0em;
+  margin-bottom: 0em;
 }
 
-.header-upper, .header-lower {
+.header-upper,
+.header-lower {
   max-width: 80rem;
   margin: 0 auto;
 }

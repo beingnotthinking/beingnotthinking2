@@ -1,39 +1,52 @@
-import './index.css';
+import "./index.css";
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Contact, Home, Travel } from "./pages";
 
-import Contact from './pages/Contact';
-import Home from './pages/Home';
-import Travel from './pages/Travel';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import SiteContainer from './SiteContainer';
-import WhoIsBeingNotThinking from './posts/who-is-beingnotthinking.mdx'
-import CarryOnAndADream from './travel/posts/carry-on-and-a-dream.mdx'
-import WhyBeingNotThinking from './posts/why-being-not-thinking.mdx'
-import WhyWeChoseVanlife from './posts/why-we-chose-vanlife.mdx'
-import reportWebVitals from './reportWebVitals';
-import Post from './components/Post';
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import SiteContainer from "./SiteContainer";
+import reportWebVitals from "./reportWebVitals";
+import { allPosts, travelPosts } from "./posts";
+import { Post } from "./components";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-      <BrowserRouter>
-        <SiteContainer>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/travel" element={<Travel />} />
-            <Route path="/travel/posts/carry-on-and-a-dream" element={<CarryOnAndADream />} />
-            <Route path="/posts/who-is-beingnotthinking" element={<Post markdown={<WhoIsBeingNotThinking />} />} />
-            <Route path="/posts/why-being-not-thinking" element={<WhyBeingNotThinking />} />
-            <Route path="/posts/why-we-chose-vanlife" element={<WhyWeChoseVanlife />} />
-          </Routes>
-        </SiteContainer>
-      </BrowserRouter>
+    <BrowserRouter>
+      <SiteContainer>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="travel">
+            {travelPosts.map((post) => {
+              console.log(post);
+              // We don't have any props to pass to the post component, but we could in the future.
+              return (
+                <Route
+                  key={post.postId}
+                  path={post.postId}
+                  element={<Post post={post} />}
+                />
+              );
+            })}
+            <Route index element={<Travel />} />
+          </Route>
+          {allPosts.map((post) => {
+            return (
+              <Route
+                key={post.postId}
+                path={`${post.postId}`}
+                element={<Post post={post} />}
+              />
+            );
+          })}
+        </Routes>
+      </SiteContainer>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

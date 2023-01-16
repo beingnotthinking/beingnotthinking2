@@ -1,0 +1,26 @@
+.post {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.post > img {
+  border-radius: 3px;
+  display: block;
+}
+
+.post > h2 {
+  color: blue;
+}
+
+.post > h3 {
+  color: blueviolet;
+}
+
+.post > h4 {
+  color: purple;
+}
+
+.post ol > li > p > strong:first-child {
+  color: green;
+}
