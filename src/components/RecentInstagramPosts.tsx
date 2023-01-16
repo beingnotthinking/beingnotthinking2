@@ -42,7 +42,7 @@ export const RecentInstagramPosts = () => {
     return () => {
       ignore = true;
     };
-  }, [setInstagramPosts]);
+  }, []);
 
   return (
     <div className="instagram-container">
