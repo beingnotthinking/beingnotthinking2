@@ -13,6 +13,8 @@ import CarryOnAndADream from './travel/posts/carry-on-and-a-dream.mdx'
 import WhyBeingNotThinking from './posts/why-being-not-thinking.mdx'
 import WhyWeChoseVanlife from './posts/why-we-chose-vanlife.mdx'
 import reportWebVitals from './reportWebVitals';
+import Post from './components/Post';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -26,7 +28,7 @@ root.render(
             <Route path="/contact" element={<Contact />} />
             <Route path="/travel" element={<Travel />} />
             <Route path="/travel/posts/carry-on-and-a-dream" element={<CarryOnAndADream />} />
-            <Route path="/posts/who-is-beingnotthinking" element={<WhoIsBeingNotThinking />} />
+            <Route path="/posts/who-is-beingnotthinking" element={<Post markdown={<WhoIsBeingNotThinking />} />} />
             <Route path="/posts/why-being-not-thinking" element={<WhyBeingNotThinking />} />
             <Route path="/posts/why-we-chose-vanlife" element={<WhyWeChoseVanlife />} />
           </Routes>
