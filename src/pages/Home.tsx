@@ -1,24 +1,12 @@
 import './Home.css';
 
 import PostPreview from '../components/PostPreview';
-import InstagramData from '../components/InstagramData';
+import { RecentInstagramPosts } from '../components/RecentInstagramPosts';
 import WhoIsBeingNotThinking from '../images/who-is-beingnotthinking.webp'
 import WhyWeChoseVanlife from '../images/why-we-chose-vanlife.webp'
 import WhyBeingNotThinking from '../images/why-being-not-thinking.webp'
 
-import React, { useEffect } from 'react';
-
 function Home() {
-    const [instagramData, setInstagramData] = React.useState<JSX.Element | null>(null);
-
-    React.useEffect(() => {
-        InstagramData().then(data => {
-            if (data !== undefined) {
-              setInstagramData(data);
-            }
-          });
-      }, []);
-
     const posts = [
         {
             postId: "who-is-beingnotthinking",
@@ -59,7 +47,7 @@ function Home() {
                     }                                
                 </div>       
         </div>
-            {instagramData}
+            <RecentInstagramPosts />
         </>
     )
 }
