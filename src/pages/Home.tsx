@@ -3,7 +3,7 @@ import "./Home.css";
 import { InstagramData, PostPreview } from "../components/";
 import React, { useEffect } from "react";
 
-import { allPosts } from "../posts";
+import { allPosts, featuredPosts } from "../posts";
 
 export const Home = () => {
   const [instagramData, setInstagramData] = React.useState<JSX.Element | null>(
@@ -22,7 +22,7 @@ export const Home = () => {
     <>
       <div className="home-container">
         <div className="blog-posts">
-          {allPosts.map(({ postId, imgAlt, imgSrc, title }) => (
+          {featuredPosts.map(({ postId, imgAlt, imgSrc, title }) => (
             <PostPreview
               key={postId}
               postId={postId}

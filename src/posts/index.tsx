@@ -63,3 +63,5 @@ export const postById = (id: string) => {
 };
 
 export const travelPosts = postsByTag("Travel");
+
+export const featuredPosts = postsByTag("Featured");

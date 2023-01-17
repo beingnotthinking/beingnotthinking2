@@ -7,7 +7,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import SiteContainer from "./SiteContainer";
 import reportWebVitals from "./reportWebVitals";
-import { allPosts, travelPosts } from "./posts";
+import { allPosts, travelPosts, featuredPosts } from "./posts";
 import { Post } from "./components";
 
 const root = ReactDOM.createRoot(
@@ -35,7 +35,7 @@ root.render(
             })}
             <Route index element={<Travel />} />
           </Route>
-          {allPosts.map((post) => {
+          {featuredPosts.map((post) => {
             return (
               <Route
                 key={post.postId}
