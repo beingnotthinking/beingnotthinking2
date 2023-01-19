@@ -2,22 +2,9 @@ import "./Home.css";
 
 import { InstagramData, PostPreview } from "../components/";
 import React, { useEffect } from "react";
-
-import { allPosts, featuredPosts } from "../posts";
+import { featuredPosts } from "../posts";
 
 export const Home = () => {
-  const [instagramData, setInstagramData] = React.useState<JSX.Element | null>(
-    null
-  );
-
-  useEffect(() => {
-    InstagramData().then((data) => {
-      if (data !== undefined) {
-        setInstagramData(data);
-      }
-    });
-  }, [setInstagramData]);
-
   return (
     <>
       <div className="home-container">
@@ -33,7 +20,7 @@ export const Home = () => {
           ))}
         </div>
       </div>
-      {instagramData}
+      <RecentInstagramPosts />
     </>
   );
 };
