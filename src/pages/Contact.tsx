@@ -13,7 +13,7 @@ export const Contact = () => (
       <input type="phone" id="phone" name="phone" />
       <label htmlFor="message">Message</label>
       <textarea id="message" name="message" />
-      <input type="submit" value="Send message" />
+      <button type="submit" value="Send message" />
     </form>
   </div>
 );
