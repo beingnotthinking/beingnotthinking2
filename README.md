@@ -1,6 +1,41 @@
-# Getting Started with Create React App
+# Being Not Thinking
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Michaela and Patrick's travel blog.
+
+## Authoring a new post
+
+1. Write your new post in a `.mdx` file. Be sure to add metadata for your post at the top of the file like so:
+    ```ts
+    export const title = "An interesting post";
+    export const author = "Zelda";
+    // These tags can be anything you like. They are only used to sort posts. They're not required.
+    export const tags = ["Interesting"];
+    // This will be used as part of your post's URL
+    export const id = "an-interesting-post";
+
+    # My Post
+
+    ...
+    ```
+2. Once you're ready to publish your post, place it in the `posts` folder.
+3. Update the `posts/index.tsx` file to include your new post in the `allPosts` list:
+    ```ts
+    import * as AnInterestingPost from "./an-interesting-post.mdx";
+
+    // Posts at the top of the list will appear first on the website.
+    export const allPosts: PostMetadata[] = [
+    {
+        postId: AnInterestingPost.id,
+        // This isn't a field you need to define in your post. It's a generated function that allows us to render the post.
+        mdx: AnInterestingPost.default,
+        title: AnInterestingPost.title,
+        tags: AnInterestingPost.tags,
+    },
+    // older posts...
+    ```
+4. Then, push your update to the GitHub repository. Your new post will appear after the deploy script finishes its task.
+
+All posts will appear on the home page. Only posts tagged with "Travel" will appear in the travel page.
 
 ## Available Scripts
 
@@ -28,19 +63,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
