@@ -41,3 +41,16 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: blue;
 }
+
+button[type="submit"] {
+    background-color: lightblue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: blue;
+}
