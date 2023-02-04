@@ -1,13 +1,13 @@
 import "./index.css";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Contact, Home, Travel } from "./pages";
+import { Contact, Home, Blog } from "./pages";
 
 import React from "react";
 import ReactDOM from "react-dom/client";
 import SiteContainer from "./SiteContainer";
 import reportWebVitals from "./reportWebVitals";
-import { allPosts, travelPosts, featuredPosts } from "./posts";
+import { allPosts, featuredPosts } from "./posts";
 import { Post } from "./components";
 
 const root = ReactDOM.createRoot(
@@ -21,8 +21,8 @@ root.render(
         <Routes>
           <Route index element={<Home />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="travel">
-            {travelPosts.map((post) => {
+          <Route path="blog">
+            {allPosts.map((post) => {
               console.log(post);
               // We don't have any props to pass to the post component, but we could in the future.
               return (
@@ -33,7 +33,7 @@ root.render(
                 />
               );
             })}
-            <Route index element={<Travel />} />
+            <Route index element={<Blog />} />
           </Route>
           {featuredPosts.map((post) => {
             return (

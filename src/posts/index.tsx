@@ -62,6 +62,4 @@ export const postById = (id: string) => {
   return allPosts.find((post) => post.postId === id);
 };
 
-export const travelPosts = postsByTag("Travel");
-
 export const featuredPosts = postsByTag("Featured");

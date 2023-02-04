@@ -22,7 +22,7 @@ function SiteContainer({ children }: SiteContainerProps) {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/travel">Travel</Link>
+                <Link to="/blog">Blog</Link>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>

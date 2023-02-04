@@ -1,12 +1,12 @@
 import "./CategoryPages.css";
 
 import { PostPreview } from "../components";
-import { travelPosts } from "../posts";
+import { allPosts } from "../posts";
 
-export const Travel = () => (
+export const Blog = () => (
   <div className="home-container">
     <div className="blog-posts">
-      {travelPosts.map(({ postId, imgAlt, imgSrc, title }) => (
+      {allPosts.map(({ postId, imgAlt, imgSrc, title }) => (
         <PostPreview
           key={postId}
           postId={postId}
