@@ -1,7 +1,7 @@
 import "./Contact.css";
 
 export const Contact = () => (
-  <div>
+<div>
     <p className="contactTitle">Fill out this form and we will get back to you as long as we get it</p>
     <form name="contact" method="POST" data-netlify="true" >
       <label htmlFor="name">Name</label>
@@ -11,7 +11,7 @@ export const Contact = () => (
       <label htmlFor="phone">Phone</label>
       <input type="phone" id="phone" name="phone" />
       <label htmlFor="message">Message</label>
-      <textarea id="message" name="message" />
+      <textarea id="message" name="message"></textarea>
       <button type="submit">Send message</button>
     </form>
   </div>
