@@ -4,15 +4,29 @@ export const Contact = () => (
 <div>
     <p className="contactTitle">Fill out this form and we will get back to you as long as we get it</p>
     <form name="contact" method="POST" data-netlify="true" >
-      <label htmlFor="name">Name</label>
-      <input type="text" id="name" name="name" />
-      <label htmlFor="email">Email</label>
-      <input type="email" id="email" name="email" />
-      <label htmlFor="phone">Phone</label>
-      <input type="phone" id="phone" name="phone" />
-      <label htmlFor="message">Message</label>
-      <textarea id="message" name="message"></textarea>
-      <button type="submit">Send message</button>
+      <p>
+        <label> Name
+          <input type="text" name="name"></input>
+        </label>
+      </p>
+      <p>
+        <label> Email
+          <input type="text" name="email"></input>
+        </label>
+      </p>
+      <p>
+        <label> Phone
+          <input type="text" name="phone"></input>
+        </label>
+      </p>
+      <p>
+        <label> Message
+          <textarea name="message"></textarea>
+        </label>        
+      </p>
+      <p>
+        <button type="submit">Send Message</button>
+      </p>
     </form>
   </div>
 );
