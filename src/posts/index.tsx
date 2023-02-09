@@ -1,5 +1,5 @@
 import * as CarryOnAndADream from "./carry-on-and-a-dream.mdx";
-import CarryOnAndADreamImage from "../images/carry-on-and-a-dream.jpg";
+import CarryOnAndADreamImage from "../images/carry-on-and-a-dream.webp";
 import * as WhoIsBeingNotThinking from "./who-is-beingnotthinking.mdx";
 import WhoIsBeingNotThinkingImage from "../images/who-is-beingnotthinking.webp";
 import * as WhyBeingNotThinking from "./why-being-not-thinking.mdx";
