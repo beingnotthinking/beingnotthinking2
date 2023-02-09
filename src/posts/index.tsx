@@ -6,6 +6,12 @@ import * as WhyBeingNotThinking from "./why-being-not-thinking.mdx";
 import WhyBeingNotThinkingImage from "../images/why-being-not-thinking.webp";
 import * as WhyWeChoseVanlife from "./why-we-chose-vanlife.mdx";
 import WhyWeChoseVanlifeImage from "../images/why-we-chose-vanlife.webp";
+import * as AddingMeditationToDailyLife from "./adding-meditation-to-daily-life.mdx";
+import AddingMeditationToDailyLifeImage from "../images/adding-meditation-to-daily-life.webp";
+import * as BeginningTheHealingProcess from "./beginning-the-healing-process.mdx";
+import BeginningTheHealingProcessImage from "../images/beginning-the-healing-process.webp";
+import * as BuildingMeditationAsAHabit from "./building-meditation-as-a-habit.mdx";
+import BuildingMeditationAsAHabitImage from "../images/building-meditation-as-a-habit.webp";
 import { MDXProps } from "mdx/types";
 
 export interface PostMetadata {
@@ -51,6 +57,30 @@ export const allPosts: PostMetadata[] = [
     imgAlt: "A boat floating off a beach in Bali",
     title: WhyBeingNotThinking.title,
     tags: WhyBeingNotThinking.tags,
+  },
+  {
+    postId: AddingMeditationToDailyLife.id,
+    mdx: AddingMeditationToDailyLife.default,
+    imgSrc: AddingMeditationToDailyLifeImage,
+    imgAlt: "A boat floating off a beach in Bali",
+    title: AddingMeditationToDailyLife.title,
+    tags: AddingMeditationToDailyLife.tags,
+  },
+  {
+    postId: BeginningTheHealingProcess.id,
+    mdx: BeginningTheHealingProcess.default,
+    imgSrc: BeginningTheHealingProcessImage,
+    imgAlt: "A boat floating off a beach in Bali",
+    title: BeginningTheHealingProcess.title,
+    tags: BeginningTheHealingProcess.tags,
+  },
+  {
+    postId: BuildingMeditationAsAHabit.id,
+    mdx: BuildingMeditationAsAHabit.default,
+    imgSrc: BuildingMeditationAsAHabitImage,
+    imgAlt: "A boat floating off a beach in Bali",
+    title: BuildingMeditationAsAHabit.title,
+    tags: BuildingMeditationAsAHabit.tags,
   },
 ];
 

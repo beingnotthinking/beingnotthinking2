@@ -33,8 +33,7 @@ function SiteContainer({ children }: SiteContainerProps) {
         <div className="header-lower">
           <p className="page-title">Patrick and Michaela</p>
           <p className="page-summary">
-            A Lifestyle blog discussing Traveling, Healing, and Living
-            differently
+            A travel blog to help you live the life you are looking for
           </p>
         </div>
       </header>
