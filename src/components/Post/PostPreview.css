@@ -9,3 +9,8 @@
   display: block;
   margin: auto;
 }
+
+.post-preview h2 {
+  width: 300px;
+  word-wrap: break-word;
+}
