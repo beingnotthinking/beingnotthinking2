@@ -1,7 +1,9 @@
 .post-preview {
   border-radius: 3px;
   display: block;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1rem;
 }
 
 .img {
