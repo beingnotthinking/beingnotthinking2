@@ -46,18 +46,18 @@
 }
 
 .post > h2 {
-  color: #275A60;
+  color: black;
   font-size: 34px;
 }
 
 .post > h3 {
-  color: blueviolet;
+  color: black;
 }
 
 .post > h4 {
-  color: purple;
+  color: black;
 }
 
 .post ol > li > p > strong:first-child {
-  color: green;
+  color: black;
 }
